@@ -38,11 +38,12 @@ public class BaseTest {
     public void init() throws MalformedURLException{
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        String apkPath = "/HUFFPOST/HUFFPOST.apk";
+      //  String apkPath = "/HUFFPOST/com.huffingtonpost.android-26.27.0.36770-release--dogfood.apk";
+        String apkPath = "/HUFFPOST/com.huffingtonpost.android-27.4.0.38334-release--dogfood.apk";
         File app = new File(apkPath);
 
-        capabilities.setCapability("deviceName", "Samsung A52");
-        capabilities.setCapability("platformVersion", "12");
+        capabilities.setCapability("deviceName", "Google Pixel XL II");
+        capabilities.setCapability("platformVersion", "11");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("maxTypingFrequency", "1");
 

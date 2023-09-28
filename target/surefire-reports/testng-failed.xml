@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [HuffpostSuites]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="RegressionSuiteOnPixelXLII11(failed)" verbose="0">
+    <parameter name="activity" value="base.LaunchActivity"/>
+    <parameter name="platformVersion" value="12"/>
+    <parameter name="AppiumServer" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="apppackage" value="com.huffingtonpost.android"/>
+    <parameter name="device" value="Samsung A52"/>
+    <classes>
+      <class name="Tests.testHomeScreen">
+        <methods>
+          <include name="initObjects"/>
+          <include name="init"/>
+          <include name="End"/>
+          <include name="testFail2"/>
+          <include name="testFail"/>
+        </methods>
+      </class> <!-- Tests.testHomeScreen -->
+    </classes>
+  </test> <!-- RegressionSuiteOnPixelXLII11(failed) -->
+</suite> <!-- Failed suite [HuffpostSuites] -->

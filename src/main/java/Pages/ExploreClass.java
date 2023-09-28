@@ -2,8 +2,12 @@ package Pages;
 
 import Helpers.WaitHelper;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import net.bytebuddy.asm.Advice;
 import org.openqa.selenium.By;
+
+import java.util.List;
 
 public class ExploreClass extends BaseClass{
 
@@ -16,8 +20,87 @@ public class ExploreClass extends BaseClass{
     private By favoriteSectionsLbl = MobileBy.AccessibilityId("Favorite Sections");
     private By allSectionsLbl = MobileBy.AccessibilityId("ALL SECTIONS");
 
+    private By magnifier = By.xpath("//android.widget.Button[@content-desc=\"Search\"]/android.widget.ImageView");
+
+    private By exploreContent = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ScrollView");
+   // US News elements
+    private By USNews = MobileBy.AccessibilityId("US News");
+    private By WorldNews = MobileBy.AccessibilityId("World News");
+    private By Business = MobileBy.AccessibilityId("Business");
+    private By Environment = MobileBy.AccessibilityId("Environment");
+    private By Health = MobileBy.AccessibilityId("Health");
+    private By SocialJustice = MobileBy.AccessibilityId("Social Justice");
+
+
+
+    // Entertainmet elements
+    private By Entertainment = MobileBy.AccessibilityId("Entertainment");
+    private By CultureAndArts = MobileBy.AccessibilityId("Culture & Arts");
+    private By Media = MobileBy.AccessibilityId("Media");
+    private By Celebrity = MobileBy.AccessibilityId("Celebrity");
+    private By TVAndFilm = MobileBy.AccessibilityId("TV & Film");
+
+    //Politics
+    private By Politics = MobileBy.AccessibilityId("Politics");
+    private By Congress = MobileBy.AccessibilityId("Congress");
+    private By Extremism = MobileBy.AccessibilityId("Extremism");
+
+    //Life
+    private By Life = MobileBy.AccessibilityId("Life");
+    private By StyleAndBeauty = MobileBy.AccessibilityId("Style & Beauty");
+    private By FoodAndDrink = MobileBy.AccessibilityId("Food & Drink");
+    private By Parenting = MobileBy.AccessibilityId("Parenting");
+    private By Travel = MobileBy.AccessibilityId("Travel");
+    private By Shopping = MobileBy.AccessibilityId("Shopping");
+    private By Wellness = MobileBy.AccessibilityId("Wellness");
+    private By Relationships = MobileBy.AccessibilityId("Relationships");
+    private By Money = MobileBy.AccessibilityId("Money");
+    private By HomeAndLiving = MobileBy.AccessibilityId("Home & Living");
+    private By WorkLife = MobileBy.AccessibilityId("Work/Life");
+
+    //Opinion
+    private By Opinion = MobileBy.AccessibilityId("Opinion");
+
+    //Multimedia
+    private By video = MobileBy.AccessibilityId("Video");
+
+    //Huffpost Personal
+    private By huffpostPersonal = MobileBy.AccessibilityId("Huffpost Personal");
+
+    //Voices
+
+    private By Voices = MobileBy.AccessibilityId("Voices");
+    private By IndigenousVoices = MobileBy.AccessibilityId("Indigenous Voices");
+    private By QueerVoices = MobileBy.AccessibilityId("Queer Voices");
+    private By Woman = MobileBy.AccessibilityId("Women");
+    private By BlackWoman = MobileBy.AccessibilityId("Black Voices");
+    private By LatinoVoices = MobileBy.AccessibilityId("Latino Voices");
+    private By AsianVoices = MobileBy.AccessibilityId("Asian Voices");
+
+    //other elements
+
+    private By worldNewsCheck = By.xpath("//android.widget.Button[@content-desc=\"Add World News section to my sections\"]/android.widget.ImageView");
+    private By worldNewsElement = By.xpath("//android.view.View[@content-desc=\"World News\"]/android.view.ViewGroup[1]/android.view.View");
+
+    public void tapOnWorldNewsCheck(){
+        driver.findElement(worldNewsCheck).click();
+    }
+
+
+
+
+
+
+
+    public Boolean isContentDisplayed() {return driver.findElement(exploreContent).isDisplayed();}
 
     public Boolean isLogInButtonDisplayed() {return driver.findElement(logInBtn).isDisplayed();}
+
+    public SearchClass clickOnMagnifier(){
+        driver.findElement(magnifier).click();
+        return new SearchClass(driver);
+    }
+
 
     public Boolean isAllSectionsLblDisplayed(){
         WaitHelper.waitForElementDisplayed(driver,allSectionsLbl,40);
@@ -27,18 +110,20 @@ public class ExploreClass extends BaseClass{
        return driver.findElement(favoriteSectionsLbl).isDisplayed();
     }
 
-    public void clickOnLogInBtn(){
+    public SignInClass clickOnLogInBtn(){
         WaitHelper.waitForElementDisplayed(driver,logInBtn,40);
         driver.findElement(logInBtn).click();
+        return new SignInClass(driver);
     }
     public Boolean isExploreLblDisplayed() {
         WaitHelper.waitForElementDisplayed(driver,exploreLbl,40);
        return driver.findElement(exploreLbl).isDisplayed();
     }
 
-    public void tapOnSearchIcon(){
+    public SearchClass tapOnSearchIcon(){
         WaitHelper.waitForElementDisplayed(driver, searchIcon,40);
         driver.findElement(searchIcon).click();
+        return new SearchClass(driver);
     }
 
     public Boolean isTopStoriesLblDisplayed(){
@@ -48,6 +133,7 @@ public class ExploreClass extends BaseClass{
 
     public void clickOnUSNews(){
         WaitHelper.waitForElementDisplayed(driver,usNewsLbl,40);
+        scrollUntilElement(usNewsLbl);
         driver.findElement(usNewsLbl).click();
     }
     public void clickOnWorldNews(){
@@ -65,13 +151,13 @@ public class ExploreClass extends BaseClass{
     }
 
     public void clickOnHealth(){
-        WaitHelper.waitForElementDisplayed(driver,healthLbl,40);
-        driver.findElement(healthLbl).click();
+        WaitHelper.waitForElementDisplayed(driver,Health,40);
+        driver.findElement(Health).click();
     }
 
     public void clickOnSocialJustice(){
         WaitHelper.waitForElementDisplayed(driver,socialJusticeLbl,40);
-        driver.findElement(socialJusticeLbl).click();
+        driver.findElement(SocialJustice).click();
     }
 
     // SECTIONS
@@ -125,8 +211,8 @@ public class ExploreClass extends BaseClass{
     }
 
     public Boolean isEntertainmentSectionLblDisplayed(){
-        WaitHelper.waitForElementDisplayed(driver,environmentLbl,40);
-        return   driver.findElement(environmentLbl).isDisplayed();
+        WaitHelper.waitForElementDisplayed(driver,entertainmentLbl,40);
+        return   driver.findElement(entertainmentLbl).isDisplayed();
     }
 
     public void clickOntvAndFilmLbl(){
@@ -152,12 +238,12 @@ public class ExploreClass extends BaseClass{
     }
 
     public void clickOnCultureAndArtsLbl(){
-        WaitHelper.waitForElementDisplayed(driver,cultureAndArts,40);
-        driver.findElement(cultureAndArts).click();
+        WaitHelper.waitForElementDisplayed(driver,CultureAndArts,40);
+        driver.findElement(CultureAndArts).click();
     }
 
-    public void clickOnEntertainmentLbl(){
-        WaitHelper.waitForElementDisplayed(driver,entertainmentLbl,40);
+    public void clickOnEntertainment(){
+        WaitHelper.waitForElementDisplayed(driver, entertainmentLbl,40);
         driver.findElement(entertainmentLbl).click();
     }
 
@@ -175,14 +261,14 @@ public class ExploreClass extends BaseClass{
 
 
     public void clickOnEnvironmentLbl(){
-        WaitHelper.waitForElementDisplayed(driver,entertainmentLbl,40);
-        driver.findElement(entertainmentLbl).click();
+        WaitHelper.waitForElementDisplayed(driver,Environment,40);
+        driver.findElement(Environment).click();
     }
 
 
     public void clickOnBusinessLbl(){
-        WaitHelper.waitForElementDisplayed(driver,businessLbl,40);
-         driver.findElement(businessLbl).click();
+        WaitHelper.waitForElementDisplayed(driver,Business,40);
+         driver.findElement(Business).click();
     }
 
     public Boolean isNewsLblDisplayed(){
@@ -352,7 +438,17 @@ public class ExploreClass extends BaseClass{
         driver.findElement(womenLbl).click();
     }
 
-
+    public Boolean validateWorldNewsIsAddedToCarrousel(){
+        Boolean itemFound = false;
+        List<MobileElement> carrouselList = driver.findElements(By.className("android.view.View"));
+        for (int i = 0;i<= carrouselList.size(); i++){
+           if (carrouselList.get(i).getText().contains("World News")){
+               itemFound= true;
+               break;
+           }
+        }
+       return itemFound;
+    }
 
 
 

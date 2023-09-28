@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HuffpostSuites" parallel="none" >
+    <test name="RegressionSuiteOnPixelXLII11" >
+        <parameter name="device" value="Samsung A52"></parameter>
+        <parameter name="apppackage" value="com.huffingtonpost.android"></parameter>
+        <parameter name="activity" value="base.LaunchActivity"></parameter>
+        <parameter name="platformVersion" value="12"></parameter>
+        <parameter name="AppiumServer" value="http://127.0.0.1:4723/wd/hub"></parameter>
+        <classes>
+            <!--        <class name="Tests.FullOnboardingAndGoogleSignIn"></class> -->
+            <!--  <class name="Tests.FullOnboardingAndFacebookSignIn"></class> -->
+            <!--      <class name="Tests.FullOnboardingAndGoogleSignIn"></class> -->
+            <!--                    <class name="Tests.testHomeScreen"></class> -->
+                  <class name="Tests.testExploreScreen"></class>
+            <!--      <class name="Tests.testBookmarksScreen"></class> -->
+            <!--                   <class name="Tests.testFrontPage"></class> -->
+            <!--            <class name="Tests.testMySettingsScreen"></class> -->
+                        </classes>
+                    </test>
+                </suite>

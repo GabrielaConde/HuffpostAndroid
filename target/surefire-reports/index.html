@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-HuffpostSuites" class="navigator-link">
+              <span class="suite-name border-failed">HuffpostSuites</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-HuffpostSuites" class="navigator-link ">
+                    <span>C:\Users\gabmo\IdeaProjects\HuffpostAndroid\SuitesFolder\SecuentialSuites.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-HuffpostSuites" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-HuffpostSuites" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-HuffpostSuites" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-HuffpostSuites" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-HuffpostSuites" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-HuffpostSuites" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">15 methods, 2 failed,   13 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-HuffpostSuites" class="hide-methods failed suite-HuffpostSuites"> (hide)</a> <!-- hide-methods failed suite-HuffpostSuites -->
+                      <a href="#" panel-name="suite-HuffpostSuites" class="show-methods failed suite-HuffpostSuites"> (show)</a> <!-- show-methods failed suite-HuffpostSuites -->
+                    </span>
+                    <div class="method-list-content failed suite-HuffpostSuites">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="testFail">testFail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="testFail2">testFail2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-HuffpostSuites -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-HuffpostSuites" class="hide-methods passed suite-HuffpostSuites"> (hide)</a> <!-- hide-methods passed suite-HuffpostSuites -->
+                      <a href="#" panel-name="suite-HuffpostSuites" class="show-methods passed suite-HuffpostSuites"> (show)</a> <!-- show-methods passed suite-HuffpostSuites -->
+                    </span>
+                    <div class="method-list-content passed suite-HuffpostSuites">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="basicOnboarding">basicOnboarding</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="clickOnLatestNewsArticle">clickOnLatestNewsArticle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateCellElements">validateCellElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateCellFromWhatsHappeningSectionDisplays">validateCellFromWhatsHappeningSectionDisplays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateFollowedSectionCarrouoselText">validateFollowedSectionCarrouoselText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateFollowedSectionLabelDisplays">validateFollowedSectionLabelDisplays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateFollowedSectionTextDisplays">validateFollowedSectionTextDisplays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateLatestNewsLabelSection">validateLatestNewsLabelSection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateLifeCategory">validateLifeCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateMainHPElements">validateMainHPElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateShoppingCategoryElements">validateShoppingCategoryElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateSplashDisplays">validateSplashDisplays</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-HuffpostSuites" title="Tests.testHomeScreen" class="method navigator-link" hash-for-method="validateWhatsHappeningLabelSection">validateWhatsHappeningLabelSection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-HuffpostSuites -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-HuffpostSuites" class="panel HuffpostSuites">
+          <div class="suite-HuffpostSuites-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Tests.testHomeScreen</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFail">
+                  </a> <!-- testFail -->
+                  <span class="method-name">testFail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Tests.testHomeScreen.testFail(testHomeScreen.java:235)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFail2">
+                  </a> <!-- testFail2 -->
+                  <span class="method-name">testFail2</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Tests.testHomeScreen.testFail2(testHomeScreen.java:241)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HuffpostSuites-class-failed -->
+          <div class="suite-HuffpostSuites-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.testHomeScreen</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="basicOnboarding">
+                  </a> <!-- basicOnboarding -->
+                  <span class="method-name">basicOnboarding</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnLatestNewsArticle">
+                  </a> <!-- clickOnLatestNewsArticle -->
+                  <span class="method-name">clickOnLatestNewsArticle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCellElements">
+                  </a> <!-- validateCellElements -->
+                  <span class="method-name">validateCellElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCellFromWhatsHappeningSectionDisplays">
+                  </a> <!-- validateCellFromWhatsHappeningSectionDisplays -->
+                  <span class="method-name">validateCellFromWhatsHappeningSectionDisplays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateFollowedSectionCarrouoselText">
+                  </a> <!-- validateFollowedSectionCarrouoselText -->
+                  <span class="method-name">validateFollowedSectionCarrouoselText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateFollowedSectionLabelDisplays">
+                  </a> <!-- validateFollowedSectionLabelDisplays -->
+                  <span class="method-name">validateFollowedSectionLabelDisplays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateFollowedSectionTextDisplays">
+                  </a> <!-- validateFollowedSectionTextDisplays -->
+                  <span class="method-name">validateFollowedSectionTextDisplays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLatestNewsLabelSection">
+                  </a> <!-- validateLatestNewsLabelSection -->
+                  <span class="method-name">validateLatestNewsLabelSection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLifeCategory">
+                  </a> <!-- validateLifeCategory -->
+                  <span class="method-name">validateLifeCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateMainHPElements">
+                  </a> <!-- validateMainHPElements -->
+                  <span class="method-name">validateMainHPElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateShoppingCategoryElements">
+                  </a> <!-- validateShoppingCategoryElements -->
+                  <span class="method-name">validateShoppingCategoryElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSplashDisplays">
+                  </a> <!-- validateSplashDisplays -->
+                  <span class="method-name">validateSplashDisplays</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateWhatsHappeningLabelSection">
+                  </a> <!-- validateWhatsHappeningLabelSection -->
+                  <span class="method-name">validateWhatsHappeningLabelSection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HuffpostSuites-class-passed -->
+        </div> <!-- panel HuffpostSuites -->
+        <div panel-name="test-xml-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\gabmo\IdeaProjects\HuffpostAndroid\SuitesFolder\SecuentialSuites.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;HuffpostSuites&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;RegressionSuiteOnPixelXLII11&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;activity&quot; value=&quot;base.LaunchActivity&quot;/&gt;
+    &lt;parameter name=&quot;platformVersion&quot; value=&quot;12&quot;/&gt;
+    &lt;parameter name=&quot;AppiumServer&quot; value=&quot;http://127.0.0.1:4723/wd/hub&quot;/&gt;
+    &lt;parameter name=&quot;apppackage&quot; value=&quot;com.huffingtonpost.android&quot;/&gt;
+    &lt;parameter name=&quot;device&quot; value=&quot;Samsung A52&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.testHomeScreen&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- RegressionSuiteOnPixelXLII11 --&gt;
+&lt;/suite&gt; &lt;!-- HuffpostSuites --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for HuffpostSuites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">RegressionSuiteOnPixelXLII11 (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for HuffpostSuites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for HuffpostSuites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_HuffpostSuites');
+function tableData_HuffpostSuites() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(15);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'validateMainHPElements')
+data.setCell(0, 2, 'Tests.testHomeScreen')
+data.setCell(0, 3, 23013);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validateLatestNewsLabelSection')
+data.setCell(1, 2, 'Tests.testHomeScreen')
+data.setCell(1, 3, 23010);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateSplashDisplays')
+data.setCell(2, 2, 'Tests.testHomeScreen')
+data.setCell(2, 3, 23008);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateCellFromWhatsHappeningSectionDisplays')
+data.setCell(3, 2, 'Tests.testHomeScreen')
+data.setCell(3, 3, 21005);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateCellElements')
+data.setCell(4, 2, 'Tests.testHomeScreen')
+data.setCell(4, 3, 20006);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'basicOnboarding')
+data.setCell(5, 2, 'Tests.testHomeScreen')
+data.setCell(5, 3, 19691);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'validateWhatsHappeningLabelSection')
+data.setCell(6, 2, 'Tests.testHomeScreen')
+data.setCell(6, 3, 18007);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'clickOnLatestNewsArticle')
+data.setCell(7, 2, 'Tests.testHomeScreen')
+data.setCell(7, 3, 10005);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testFail2')
+data.setCell(8, 2, 'Tests.testHomeScreen')
+data.setCell(8, 3, 10001);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'validateFollowedSectionLabelDisplays')
+data.setCell(9, 2, 'Tests.testHomeScreen')
+data.setCell(9, 3, 7007);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testFail')
+data.setCell(10, 2, 'Tests.testHomeScreen')
+data.setCell(10, 3, 5011);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'validateFollowedSectionTextDisplays')
+data.setCell(11, 2, 'Tests.testHomeScreen')
+data.setCell(11, 3, 5009);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'validateFollowedSectionCarrouoselText')
+data.setCell(12, 2, 'Tests.testHomeScreen')
+data.setCell(12, 3, 4001);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'validateLifeCategory')
+data.setCell(13, 2, 'Tests.testHomeScreen')
+data.setCell(13, 3, 2004);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'validateShoppingCategoryElements')
+data.setCell(14, 2, 'Tests.testHomeScreen')
+data.setCell(14, 3, 0);
+window.suiteTableData['HuffpostSuites']= { tableData: data, tableDiv: 'times-div-HuffpostSuites'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-HuffpostSuites">
+              </div> <!-- times-div-HuffpostSuites -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for HuffpostSuites</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-HuffpostSuites" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.testHomeScreen</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">initObjects</span>
+                <span class="method-start">10669 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">basicOnboarding</span>
+                <span class="method-start">44731 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateMainHPElements</span>
+                <span class="method-start">64422 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateSplashDisplays</span>
+                <span class="method-start">87435 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateLatestNewsLabelSection</span>
+                <span class="method-start">110443 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateCellElements</span>
+                <span class="method-start">133453 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickOnLatestNewsArticle</span>
+                <span class="method-start">153459 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateWhatsHappeningLabelSection</span>
+                <span class="method-start">163464 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateCellFromWhatsHappeningSectionDisplays</span>
+                <span class="method-start">181471 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateFollowedSectionLabelDisplays</span>
+                <span class="method-start">202477 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateFollowedSectionTextDisplays</span>
+                <span class="method-start">209484 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateFollowedSectionCarrouoselText</span>
+                <span class="method-start">214494 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateLifeCategory</span>
+                <span class="method-start">218495 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateShoppingCategoryElements</span>
+                <span class="method-start">220499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testFail</span>
+                <span class="method-start">220499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testFail2</span>
+                <span class="method-start">225519 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">End</span>
+                <span class="method-start">235520 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -22,7 +22,7 @@ public class OnboardingPrivacyClass extends Onboarding{
     public Boolean IsWeValueYourPrivacyTitlelblDisplayed() { return driver.findElement(WeValueYourPrivacyTitlelbl).isDisplayed();}
     public Boolean IsWeValueYourProvacyMsgLblDisplayed() { return driver.findElement(WeValueYourPrivacyMsglbl).isDisplayed();}
     public void tapOnMoreOptions() {  driver.findElement(MoreOptionsBtn).click();}
-    public OnboardingSelectLocationClass tapOnAgreeBtn(){
+    public OnboardingSelectLocationClass  tapOnAgreeBtn(){
         driver.findElement(AgreeBtn).click();
         return new OnboardingSelectLocationClass(driver);
     }

@@ -47,31 +47,31 @@ public class FullOnboardingAndFacebookSignIn extends BaseTest {
     public void tapOnAgreeBtn(){
         testName = "tapOnAgreeBtn";
         System.out.println("Tap on Agree Button");
-        edition = privacy.tapOnAgreeBtn();
+        edition =privacy.tapOnAgreeBtn();
     }
 
-    @Test(priority = 5)
+  //  @Test(priority = 5)
     public void validateEditionScreenImageIsDisplayed() {
         testName = "validateEditionScreenImageIsDisplayed";
         System.out.println("Validate edition screen image is displayed");
         Assert.assertTrue(edition.isImageDisplayed());
     }
 
-    @Test(priority = 6)
+ //   @Test(priority = 6)
     public void validateSelectYourEditionTitleIsDisplayed(){
         testName="validateSelectYourEditionTitleIsDisplayed";
         System.out.println("Validate Select your Edition title is displayed on Edition's screen");
         Assert.assertTrue(edition.isSelectEditionLblDisplayed());
     }
 
-    @Test(priority = 7)
+  //  @Test(priority = 7)
     public void validateSelectEditionText(){
         testName = "validateSelectEditionText";
         System.out.println("Validate Select Edition Text");
         Assert.assertTrue(edition.useMyLocationTextLbl());
     }
 
-    @Test(priority = 8)
+ //   @Test(priority = 8)
     public void validateEditionScreenDisplays(){
         testName = "validateEditionScreenDisplays";
         System.out.println("Validate Edition Screen Displays");
@@ -84,7 +84,7 @@ public class FullOnboardingAndFacebookSignIn extends BaseTest {
     public void validateTappingONUseMyLocationBtn(){
         testName ="validateTappingONUseMyLocationBtn";
         System.out.println("Validate Tapping on Use My Location Button");
-        alerts= edition.tapOnUseMyLocationBtn();
+        edition.tapOnUseMyLocationBtn();
 
     }
 

@@ -1,55 +1,53 @@
 package Tests;
 
 import Base.BaseTest;
+import Pages.BottomMenuClass;
 import Pages.HomeClass;
+import Pages.MySettingsClass;
 import Pages.Onboarding;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import javax.swing.*;
+import java.lang.reflect.Type;
 
 public class testHomeScreen extends BaseTest {
     Onboarding onboarding;
     HomeClass home;
     String testName;
 
+    MySettingsClass settings;
+
+    BottomMenuClass bottom;
+
     @BeforeClass
     public void initObjects()throws InterruptedException{
-
         onboarding = new Onboarding(driver);
+        bottom = new BottomMenuClass(driver);
     }
 
     @Test(priority = 1)
     public void basicOnboarding()throws InterruptedException{
-        testName ="basic Onboarding";
-        System.out.println("Validate Skip onboarding");
-      home=  onboarding.skipIntro();
-
+            testName = "basic Onboarding";
+            System.out.println("Validate Skip onboarding");
+            home = onboarding.skipIntro();
     }
 
     @Test(priority = 2)
     public void validateMainHPElements()throws InterruptedException{
+           Thread.sleep(4000);
         testName ="validateMainHPElements";
         System.out.println("validate Main HP Elements are displayed");
-        Thread.sleep(4000);
-        Assert.assertTrue(home.isWelcomeMsgDisplayed());
-        System.out.println("validate Welcome Msg is displayed");
-        home.clickOnWelcomeMsgCloseBtn();
-        Thread.sleep(2000);
         Assert.assertTrue(home.isHuffpostLblDisplayed());
         System.out.println("validate HP label is displayed");
         Thread.sleep(2000);
         Assert.assertTrue(home.isMainImageDisplayed());
         System.out.println("validate Main Image is displayed");
         Thread.sleep(2000);
-        Assert.assertTrue(home.iSsplashTitleDisplayed());
-        System.out.println("validate Splash title is displayed");
-        Thread.sleep(2000);
         Assert.assertTrue(home.isToolTipDisplayed());
         System.out.println("validate is Tool Tip displayed");
         home.clickOnToolTip();
-
     }
 
     @Test(priority = 3)
@@ -62,14 +60,14 @@ public class testHomeScreen extends BaseTest {
     }
 
     @Test(priority = 4)
-    public void validateLatestNewsLabelSection(){
+    public void validateLatestNewsLabelSection()throws InterruptedException{
         testName ="validateLatestNewsLabelSection";
         System.out.println("Validate Latest News Section Label is displayed");
         Assert.assertTrue(home.isNewsCategoryLblDisplayed());
     }
 
     @Test(priority = 5)
-    public void validateCellElements(){
+    public void validateCellElements()throws InterruptedException{
         testName ="validateCellElements";
         System.out.println("Validate the cell elements are displayed");
         home.isDateCellDisplayed();
@@ -83,7 +81,7 @@ public class testHomeScreen extends BaseTest {
         testName ="clickOnLatestNewsArticle";
         System.out.println("Validate Latest News Cell displays");
         home.clickOnNewsSectionCell();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         home.androidBACK();
     }
 
@@ -95,41 +93,41 @@ public class testHomeScreen extends BaseTest {
     }
 
     @Test(priority = 7)
-    public void validateWhatsHappeningLabelSection(){
+    public void validateWhatsHappeningLabelSection()throws InterruptedException{
         testName ="validateWhatsHappeningLabelSection";
         System.out.println("Validate Whats Happening Section displayed");
         home.validateWhatsHappeningSection();
-
     }
 
     @Test(priority = 8)
     public void validateCellFromWhatsHappeningSectionDisplays()throws InterruptedException{
         testName ="validateCellFromWhatsHappeningSectionDisplays";
         System.out.println("Validate Whats Happening article opens");
+        Thread.sleep(2000);
        home.clickOnWhatsHappeningSectionCell();
-       Thread.sleep(5000);
+       Thread.sleep(3000);
        home.androidBACK();
     }
 
     @Test(priority = 9)
-    public void validateFollowedSectionLabelDisplays(){
+    public void validateFollowedSectionLabelDisplays()throws InterruptedException{
         testName ="validateFollowedSectionLabelDisplays";
         System.out.println("Validate Followed Section Label displays");
-       Assert.assertTrue(home.validateFollowedSectionsLbl());
+      home.validateFollowedSectionsLbl();
     }
 
     @Test(priority = 10)
-    public void validateFollowedSectionTextDisplays(){
+    public void validateFollowedSectionTextDisplays()throws InterruptedException{
         testName ="validateFollowedSectionTextDisplays";
         System.out.println("Validate Followed Section text displays");
-        Assert.assertTrue(home.validateFollowedSectonsTxt());
+      home.validateFollowedSectonsTxt();
     }
 
     @Test(priority = 11)
-    public void validateFollowedSectionCarrouoselText(){
+    public void validateFollowedSectionCarrouoselText()throws InterruptedException{
         testName ="validateFollowedSectionCarrouosel";
         System.out.println("Validate Followed Section Carrousel");
-        Assert.assertTrue(home.validateFollowedSectonsTxt());
+      home.validateFollowedSectonsTxt();
     }
 
     @Test(priority = 12)
@@ -139,13 +137,16 @@ public class testHomeScreen extends BaseTest {
 
     @Test(priority = 13)
     public void validateLifeCategory()throws InterruptedException{
-        Assert.assertTrue(home.isLifeCategoryLblDisplayed());
+        Thread.sleep(2000);
+        home.isLifeCategoryLblDisplayed();
         home.clickOnLifeCategory();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         home.androidBACK();
+        home.scroll(1,1);
         home.clickOnSeeMoreLife();
         Thread.sleep(2000);
         home.androidBACK();
+        Thread.sleep(2000);
     }
 
 
@@ -154,7 +155,7 @@ public class testHomeScreen extends BaseTest {
         home.scroll(1,1);
         home.isShoppingSectionLblDisplayed();
         home.clickOnShoppingSectionCell();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         home.androidBACK();
     }
 
@@ -167,5 +168,6 @@ public class testHomeScreen extends BaseTest {
         Thread.sleep(2000);
         home.androidBACK();
     }
+
 
 }

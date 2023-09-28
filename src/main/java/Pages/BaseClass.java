@@ -11,6 +11,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -112,8 +113,8 @@ public class BaseClass {
     }
 
     public void scroll(int x, int y) {
-        int startY = (int) (driver.manage().window().getSize().getHeight() * 0.5);
-        int endY = (int) (driver.manage().window().getSize().getHeight() * 0.0);
+        int startY = (int) (driver.manage().window().getSize().getHeight() * 0.7);
+        int endY = (int) (driver.manage().window().getSize().getHeight() * 0.2);
         TouchAction action = new TouchAction(driver);
         action.press(point(x, startY)).waitAction(waitOptions(ofSeconds(5))).moveTo(point(x, endY)).release().perform();
     }
@@ -123,6 +124,12 @@ public class BaseClass {
         int endY = (int) (driver.manage().window().getSize().getHeight() * 0.0);
         TouchAction action = new TouchAction(driver);
         action.press(point(x, startY)).waitAction(waitOptions(ofSeconds(5))).moveTo(point(x, endY)).release().perform();
+    }
+
+    public void typeText(String text){
+        Actions a = new Actions(driver);
+        a.sendKeys(text);
+        a.perform();
     }
 
     public void tinyScroll(int x, int y) {

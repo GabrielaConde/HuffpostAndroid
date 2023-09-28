@@ -10,9 +10,10 @@ public class BottomMenuClass extends BaseClass{
     public BottomMenuClass(AndroidDriver driver){super(driver);}
 
     private By topNews = MobileBy.AccessibilityId("Top News");
-    private By explore = MobileBy.AccessibilityId("Section List");
- //   private By explore = MobileBy.AccessibilityId("Explore, tab, 2 of 5");
-    private By bookmarks = MobileBy.AccessibilityId("Bookmarks");
+ //   private By explore = MobileBy.AccessibilityId("Section List");
+   private By explore = MobileBy.AccessibilityId("Explore, tab, 2 of 5");
+  //  private By bookmarks = MobileBy.AccessibilityId("Bookmarks");
+    private By bookmarks = MobileBy.AccessibilityId("Bookmarks, tab, 3 of 5");
     private By alerts = MobileBy.AccessibilityId("Alert History");
     private By mySettings= MobileBy.AccessibilityId("App Settings");
 
